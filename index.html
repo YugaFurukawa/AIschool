@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アクセンチュア AI スクール</title>
+    <style>
+        /* ベーシックなスタイル */
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #4a0e78, #7b1fa2);
+            color: #ffffff;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 0.5rem;
+        }
+        .btn-primary {
+            background-color: #ffffff;
+            color: #4a0e78;
+        }
+        .btn-secondary {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .features {
+            background-color: #5e1d93;
+            padding: 4rem 0;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .feature {
+            text-align: center;
+        }
+        .courses {
+            background-color: #ffffff;
+            color: #4a0e78;
+            padding: 4rem 0;
+        }
+        .courses h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .course h3 {
+            margin-bottom: 1rem;
+        }
+        .course ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course li {
+            margin-bottom: 0.5rem;
+        }
+        .cta {
+            padding: 4rem 0;
+        }
+        .cta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        footer {
+            background-color: #4a0e78;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" aria-label="ホーム">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 22V12H15V22M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    アクセンチュア AI スクール
+                </a>
+                <a href="#courses">コース</a>
+                <a href="#features">特徴</a>
+                <a href="#contact">お問い合わせ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>アクセンチュアのAIエンジニアが監修する<br>最先端のAIプログラミングスクール</h1>
+                <p>業界トップのエキスパートから学ぶ、実践型のAI開発スキル。あなたのキャリアを次のレベルへ。</p>
+                <a href="#contact" class="btn btn-primary">無料カウンセリングを予約</a>
+                <a href="#courses" class="btn btn-secondary">コース詳細</a>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 7L12 3L4 7M20 7L12 11M20 7V17L12 21M12 11L4 7M12 11V21M4 7V17L12 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h2>実践的なカリキュラム</h2>
+                        <p>最新のAI技術とプログラミング手法を学びます</p>
+                    </div>
+                    <div class="feature">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h2>エキスパート講師陣</h2>
+                        <p>アクセンチュアのAIエンジニアが直接指導</p>
+                    </div>
+                    <div class="feature">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h2>キャリアサポート</h2>
+                        <p>卒業後のキャリアパスを全面的にサポート</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" class="courses">
+            <div class="container">
+                <h2>コース概要</h2>
+                <div class="courses-grid">
+                    <div class="course">
+                        <h3>基礎コース</h3>
+                        <ul>
+                            <li>Python プログラミングの基礎</li>
+                            <li>データ分析と可視化</li>
+                            <li>機械学習の基本概念</li>
+                        </ul>
+                    </div>
+                    <div class="course">
+                        <h3>応用コース</h3>
+                        <ul>
+                            <li>深層学習と神経網</li>
+                            <li>自然言語処理と画像認識</li>
+                            <li>AIプロジェクト実践</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="cta">
+            <div class="container">
+                <div class="cta-grid">
+                    <div>
+                        <h2>あなたのAIキャリアが、ここから始まる</h2>
+                        <p>無料カウンセリングで、あなたに最適なコースプランをご提案します。経験豊富なキャリアアドバイザーがお待ちしています。</p>
+                    </div>
+                    <form action="#" method="POST">
+                        <h3>無料カウンセリング予約</h3>
+                        <label for="name" class="sr-only">お名前</label>
+                        <input type="text" id="name" name="name" placeholder="お名前" required>
+                        <label for="email" class="sr-only">メールアドレス</label>
+                        <input type="email" id="email" name="email" placeholder="メールアドレス" required>
+                        <label for="phone" class="sr-only">電話番号</label>
+                        <input type="tel" id="phone" name="phone" placeholder="電話番号">
+                        <label for="message" class="sr-only">ご質問やご要望</label>
+                        <textarea id="message" name="message" placeholder="ご質問やご要望があればお書きください"></textarea>
+                        <button type="submit" class="btn btn-primary">予約する</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 アクセンチュア AI スクール. All rights reserved.</p>
+            <nav>
+                <a href="#">利用規約</a>
+                <a href="#">プライバシーポリシー</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
