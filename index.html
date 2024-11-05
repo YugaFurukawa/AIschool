@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アクセンチュア AI スクール</title>
+    <title>アクセンチュア AI スクール - 次世代のAIエンジニアを育成</title>
     <style>
-        /* ベーシックなスタイル */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
         body {
-            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-family: 'Roboto', 'Noto Sans JP', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #4a0e78, #7b1fa2);
+            background: linear-gradient(135deg, #0a0a2a, #1a1a4a);
             color: #ffffff;
+            line-height: 1.6;
         }
         .container {
             width: 90%;
@@ -20,6 +30,13 @@
             padding: 0 20px;
         }
         header {
+            background-color: rgba(26, 26, 74, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -29,37 +46,68 @@
             color: #ffffff;
             text-decoration: none;
             margin-left: 1rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #00ffff;
         }
         .hero {
             text-align: center;
-            padding: 4rem 0;
+            padding: 8rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: -1;
         }
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
+            animation: pulse 2s infinite;
         }
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .btn {
             display: inline-block;
             padding: 0.8rem 1.5rem;
-            border-radius: 5px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
             margin: 0 0.5rem;
+            transition: all 0.3s ease;
         }
         .btn-primary {
-            background-color: #ffffff;
-            color: #4a0e78;
+            background-color: #00ffff;
+            color: #0a0a2a;
+        }
+        .btn-primary:hover {
+            background-color: #00cccc;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
         }
         .btn-secondary {
-            background-color: #000000;
-            color: #ffffff;
+            background-color: transparent;
+            color: #00ffff;
+            border: 2px solid #00ffff;
+        }
+        .btn-secondary:hover {
+            background-color: #00ffff;
+            color: #0a0a2a;
         }
         .features {
-            background-color: #5e1d93;
+            background-color: rgba(26, 26, 74, 0.8);
             padding: 4rem 0;
         }
         .features-grid {
@@ -69,23 +117,47 @@
         }
         .feature {
             text-align: center;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+        .feature svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1rem;
         }
         .courses {
             background-color: #ffffff;
-            color: #4a0e78;
+            color: #0a0a2a;
             padding: 4rem 0;
         }
         .courses h2 {
             text-align: center;
             margin-bottom: 2rem;
+            color: #1a1a4a;
         }
         .courses-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
+        .course {
+            background-color: rgba(26, 26, 74, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .course:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(26, 26, 74, 0.2);
+        }
         .course h3 {
             margin-bottom: 1rem;
+            color: #1a1a4a;
         }
         .course ul {
             list-style-type: none;
@@ -93,17 +165,27 @@
         }
         .course li {
             margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .course li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #00ffff;
         }
         .cta {
             padding: 4rem 0;
+            background: linear-gradient(45deg, #1a1a4a, #0a0a2a);
         }
         .cta-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
+            align-items: center;
         }
         form {
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.1);
             padding: 2rem;
             border-radius: 10px;
         }
@@ -111,12 +193,40 @@
             width: 100%;
             padding: 0.5rem;
             margin-bottom: 1rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
         }
         footer {
-            background-color: #4a0e78;
+            background-color: #0a0a2a;
             color: #ffffff;
             text-align: center;
             padding: 1rem 0;
+        }
+        .ai-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        .ai-node {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #00ffff;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+        @media (max-width: 768px) {
+            .cta-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -126,22 +236,28 @@
             <nav>
                 <a href="#" aria-label="ホーム">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 22V12H15V22M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     アクセンチュア AI スクール
                 </a>
-                <a href="#courses">コース</a>
-                <a href="#features">特徴</a>
-                <a href="#contact">お問い合わせ</a>
+                <div>
+                    <a href="#courses">コース</a>
+                    <a href="#features">特徴</a>
+                    <a href="#contact">お問い合わせ</a>
+                </div>
             </nav>
         </div>
     </header>
 
     <main>
         <section class="hero">
+            <div class="ai-animation" id="aiAnimation"></div>
             <div class="container">
-                <h1>アクセンチュアのAIエンジニアが監修する<br>最先端のAIプログラミングスクール</h1>
-                <p>業界トップのエキスパートから学ぶ、実践型のAI開発スキル。あなたのキャリアを次のレベルへ。</p>
+                <h1>次世代のAIエンジニアを育成</h1>
+                
+                <p>アクセンチュアのAIエキスパートが監修する、最先端の実践型AIプログラミングスクール。あなたの未来をAIと共に切り拓く。</p>
                 <a href="#contact" class="btn btn-primary">無料カウンセリングを予約</a>
                 <a href="#courses" class="btn btn-secondary">コース詳細</a>
             </div>
@@ -151,25 +267,31 @@
             <div class="container">
                 <div class="features-grid">
                     <div class="feature">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 7L12 3L4 7M20 7L12 11M20 7V17L12 21M12 11L4 7M12 11V21M4 7V17L12 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <h2>実践的なカリキュラム</h2>
-                        <p>最新のAI技術とプログラミング手法を学びます</p>
+                        <h2>最先端のAIカリキュラム</h2>
+                        <p>業界の最新トレンドを反映した実践的な学習内容</p>
                     </div>
                     <div class="feature">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <h2>エキスパート講師陣</h2>
-                        <p>アクセンチュアのAIエンジニアが直接指導</p>
+                        <p>アクセンチュアのAIエンジニアによる直接指導</p>
                     </div>
                     <div class="feature">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 4L12 14.01L9 11.01" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <h2>キャリアサポート</h2>
-                        <p>卒業後のキャリアパスを全面的にサポート</p>
+                        <p>AI業界への就職・転職を全面的にバックアップ</p>
                     </div>
                 </div>
             </div>
@@ -177,22 +299,24 @@
 
         <section id="courses" class="courses">
             <div class="container">
-                <h2>コース概要</h2>
+                <h2>AIエンジニア育成コース</h2>
                 <div class="courses-grid">
                     <div class="course">
-                        <h3>基礎コース</h3>
+                        <h3>AI基礎コース</h3>
                         <ul>
                             <li>Python プログラミングの基礎</li>
-                            <li>データ分析と可視化</li>
-                            <li>機械学習の基本概念</li>
+                            <li>データ分析と可視化技術</li>
+                            <li>機械学習アルゴリズムの基本</li>
+                            <li>ディープラーニング入門</li>
                         </ul>
                     </div>
                     <div class="course">
-                        <h3>応用コース</h3>
+                        <h3>AI応用コース</h3>
                         <ul>
-                            <li>深層学習と神経網</li>
-                            <li>自然言語処理と画像認識</li>
-                            <li>AIプロジェクト実践</li>
+                            <li>自然言語処理と対話システム開発</li>
+                            <li>コンピュータビジョンと画像認識</li>
+                            <li>強化学習と自動化システム</li>
+                            <li>AIプロジェクト実践演習</li>
                         </ul>
                     </div>
                 </div>
@@ -203,8 +327,8 @@
             <div class="container">
                 <div class="cta-grid">
                     <div>
-                        <h2>あなたのAIキャリアが、ここから始まる</h2>
-                        <p>無料カウンセリングで、あなたに最適なコースプランをご提案します。経験豊富なキャリアアドバイザーがお待ちしています。</p>
+                        <h2>あなたのAIキャリア、ここからスタート</h2>
+                        <p>無料カウンセリングで、あなたに最適なAI学習プランをご提案。経験豊富なキャリアアドバイザーが、あなたの未来をAIと共に描きます。</p>
                     </div>
                     <form action="#" method="POST">
                         <h3>無料カウンセリング予約</h3>
@@ -214,9 +338,9 @@
                         <input type="email" id="email" name="email" placeholder="メールアドレス" required>
                         <label for="phone" class="sr-only">電話番号</label>
                         <input type="tel" id="phone" name="phone" placeholder="電話番号">
-                        <label for="message" class="sr-only">ご質問やご要望</label>
-                        <textarea id="message" name="message" placeholder="ご質問やご要望があればお書きください"></textarea>
-                        <button type="submit" class="btn btn-primary">予約する</button>
+                        <label for="message" class="sr-only">ご質問・ご要望</label>
+                        <textarea id="message" name="message" placeholder="ご質問・ご要望があればお書きください"></textarea>
+                        <button type="submit" class="btn btn-primary">カウンセリングを予約</button>
                     </form>
                 </div>
             </div>
@@ -232,5 +356,25 @@
             </nav>
         </div>
     </footer>
+
+    <script>
+        // AI風のアニメーション
+        function createAIAnimation() {
+            const container = document.getElementById('aiAnimation');
+            const nodeCount = 50;
+
+            for (let i = 0; i < nodeCount; i++) {
+                const node = document.createElement('div');
+                node.className = 'ai-node';
+                node.style.left = `${Math.random() * 100}%`;
+                node.style.top = `${Math.random() * 100}%`;
+                node.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                node.style.animationDelay = `${Math.random() * 2}s`;
+                container.appendChild(node);
+            }
+        }
+
+        createAIAnimation();
+    </script>
 </body>
 </html>
